@@ -36,6 +36,7 @@
 		BDBF52132AE383360058F2E0 /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
 		BDBF52152AE389730058F2E0 /* AssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantViewModel.swift; sourceTree = "<group>"; };
 		BDBF52172AE389EE0058F2E0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		BDBF521C2AE3A4F90058F2E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 		BDBF51DC2AE3695F0058F2E0 /* cardmaster */ = {
 			isa = PBXGroup;
 			children = (
+				BDBF521C2AE3A4F90058F2E0 /* Info.plist */,
 				BDBF51F32AE36BFF0058F2E0 /* Source */,
 				BDBF51E12AE3695F0058F2E0 /* cardmasterApp.swift */,
 				BDBF51E32AE3695F0058F2E0 /* ContentView.swift */,
@@ -484,6 +486,7 @@
 				DEVELOPMENT_TEAM = PLD5587GKY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cardmaster/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -510,6 +513,7 @@
 				DEVELOPMENT_TEAM = PLD5587GKY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cardmaster/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
