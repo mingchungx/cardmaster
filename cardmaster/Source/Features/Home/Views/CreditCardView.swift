@@ -118,8 +118,8 @@ struct CreditCardView: View {
                 .foregroundStyle(Color.white)
             Text(creditCard.specialOffers)
                 .font(.caption2)
-                .lineLimit(nil) // Set lineLimit to nil to allow unlimited lines
-                .frame(maxWidth: 300) // Set the maximum width for the text
+                .lineLimit(nil)
+                .frame(maxWidth: 300)
         }
         .padding()
     }
