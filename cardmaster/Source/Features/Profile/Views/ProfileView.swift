@@ -245,15 +245,15 @@ extension ProfileView {
     func creditScoreDisplay(creditScore: CreditScore) -> String {
         switch(creditScore) {
         case .poor:
-            return "Poor (\(creditScoreToRange(creditScore))"
+            return "Poor (\(creditScoreToRange(creditScore)))"
         case .fair:
-            return "Fair (\(creditScoreToRange(creditScore))"
+            return "Fair (\(creditScoreToRange(creditScore)))"
         case .good:
-            return "Good (\(creditScoreToRange(creditScore))"
+            return "Good (\(creditScoreToRange(creditScore)))"
         case .great:
-            return "Great (\(creditScoreToRange(creditScore))"
+            return "Great (\(creditScoreToRange(creditScore)))"
         case .excellent:
-            return "Excellent (\(creditScoreToRange(creditScore))"
+            return "Excellent (\(creditScoreToRange(creditScore)))"
         }
     }
 }

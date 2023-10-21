@@ -23,6 +23,7 @@
 		BDBF52232AE411580058F2E0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF52222AE411580058F2E0 /* ProfileView.swift */; };
 		BDBF52252AE411600058F2E0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF52242AE411600058F2E0 /* WishlistView.swift */; };
 		BDBF52272AE4149A0058F2E0 /* CreditCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF52262AE4149A0058F2E0 /* CreditCardModel.swift */; };
+		BDBF52292AE4297F0058F2E0 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF52282AE4297F0058F2E0 /* CreditCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		BDBF52222AE411580058F2E0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BDBF52242AE411600058F2E0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
 		BDBF52262AE4149A0058F2E0 /* CreditCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardModel.swift; sourceTree = "<group>"; };
+		BDBF52282AE4297F0058F2E0 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				BDBF51FC2AE36F9F0058F2E0 /* Common */,
+				BDBF51FA2AE36F800058F2E0 /* Home */,
 				BDBF521E2AE411250058F2E0 /* Wishlist */,
 				BDBF51F92AE36F6C0058F2E0 /* Profile */,
-				BDBF51FA2AE36F800058F2E0 /* Home */,
 				BDBF51F82AE36F680058F2E0 /* Assistant */,
 			);
 			path = Features;
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				BDBF52112AE383070058F2E0 /* HomeView.swift */,
+				BDBF52282AE4297F0058F2E0 /* CreditCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				BDBF52122AE383070058F2E0 /* HomeView.swift in Sources */,
 				BDBF51E62AE3695F0058F2E0 /* ImmersiveView.swift in Sources */,
 				BDBF52272AE4149A0058F2E0 /* CreditCardModel.swift in Sources */,
+				BDBF52292AE4297F0058F2E0 /* CreditCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
