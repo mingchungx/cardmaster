@@ -14,6 +14,9 @@ struct HomeView: View {
  
     var body: some View {
         content
+            .onAppear {
+                vm.fetchRecommendations()
+            }
     }
     
     var content: some View {
@@ -33,7 +36,7 @@ struct HomeView: View {
     var recommendedCreditCards: some View {
         ScrollView(.horizontal) {
             HStack(spacing: 30) {
-                ForEach(CreditCard.dummyRecommendedCreditCards) { creditCard in
+                ForEach(vm.recommendations) { creditCard in
                     CreditCardView(creditCard: creditCard)
                 }
             }

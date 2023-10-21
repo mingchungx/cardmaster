@@ -24,6 +24,8 @@
 		BDBF52252AE411600058F2E0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF52242AE411600058F2E0 /* WishlistView.swift */; };
 		BDBF52272AE4149A0058F2E0 /* CreditCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF52262AE4149A0058F2E0 /* CreditCardModel.swift */; };
 		BDBF52292AE4297F0058F2E0 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF52282AE4297F0058F2E0 /* CreditCardView.swift */; };
+		BDBF522B2AE473660058F2E0 /* WishlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF522A2AE473660058F2E0 /* WishlistViewModel.swift */; };
+		BDBF522E2AE4830F0058F2E0 /* Office.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDBF522D2AE4830F0058F2E0 /* Office.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		BDBF52242AE411600058F2E0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
 		BDBF52262AE4149A0058F2E0 /* CreditCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardModel.swift; sourceTree = "<group>"; };
 		BDBF52282AE4297F0058F2E0 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
+		BDBF522A2AE473660058F2E0 /* WishlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewModel.swift; sourceTree = "<group>"; };
+		BDBF522D2AE4830F0058F2E0 /* Office.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Office.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +84,13 @@
 		BDBF51DC2AE3695F0058F2E0 /* cardmaster */ = {
 			isa = PBXGroup;
 			children = (
+				BDBF522C2AE482F50058F2E0 /* Resources */,
 				BDBF521C2AE3A4F90058F2E0 /* Info.plist */,
 				BDBF51E12AE3695F0058F2E0 /* cardmasterApp.swift */,
 				BDBF51E32AE3695F0058F2E0 /* ContentView.swift */,
 				BDBF51E52AE3695F0058F2E0 /* ImmersiveView.swift */,
 				BDBF51F32AE36BFF0058F2E0 /* Source */,
 				BDBF51E72AE3695F0058F2E0 /* ImageBasedLighting.skybox */,
-				BDBF51E92AE369610058F2E0 /* Assets.xcassets */,
 				BDBF51EB2AE369610058F2E0 /* Preview Content */,
 			);
 			path = cardmaster;
@@ -296,6 +300,7 @@
 		BDBF52202AE4114A0058F2E0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				BDBF522A2AE473660058F2E0 /* WishlistViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -306,6 +311,15 @@
 				BDBF52242AE411600058F2E0 /* WishlistView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BDBF522C2AE482F50058F2E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDBF522D2AE4830F0058F2E0 /* Office.jpg */,
+				BDBF51E92AE369610058F2E0 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDBF51EA2AE369610058F2E0 /* Assets.xcassets in Resources */,
+				BDBF522E2AE4830F0058F2E0 /* Office.jpg in Resources */,
 				BDBF51ED2AE369610058F2E0 /* Preview Assets.xcassets in Resources */,
 				BDBF51E82AE3695F0058F2E0 /* ImageBasedLighting.skybox in Resources */,
 			);
@@ -394,6 +409,7 @@
 				BDBF52182AE389EE0058F2E0 /* HomeViewModel.swift in Sources */,
 				BDBF51E22AE3695F0058F2E0 /* cardmasterApp.swift in Sources */,
 				BDBF52102AE3754D0058F2E0 /* UserModel.swift in Sources */,
+				BDBF522B2AE473660058F2E0 /* WishlistViewModel.swift in Sources */,
 				BDBF52122AE383070058F2E0 /* HomeView.swift in Sources */,
 				BDBF51E62AE3695F0058F2E0 /* ImmersiveView.swift in Sources */,
 				BDBF52272AE4149A0058F2E0 /* CreditCardModel.swift in Sources */,

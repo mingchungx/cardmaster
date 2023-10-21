@@ -67,11 +67,14 @@ struct AssistantView: View {
     @ViewBuilder
     func botMessage(response: String) -> some View {
         HStack {
-            Image(systemName: "person") // MARK: Remove for new design
-                .resizable()
-                .scaledToFill()
-                .frame(width: 70, height: 70)
-                .shadow(radius: 3)
+            VStack {
+                Image(systemName: "checkmark.message.fill") // MARK: Remove for new design
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 30, height: 30)
+                    .shadow(radius: 3)
+                Spacer()
+            }
             Text(response)
         }
         .padding()
@@ -88,7 +91,7 @@ struct AssistantView: View {
             Image(systemName: "person.fill")
                 .resizable()
                 .scaledToFill()
-                .frame(width: 70, height: 70)
+                .frame(width: 30, height: 30)
                 .shadow(radius: 3)
             Text(query)
         }

@@ -9,5 +9,12 @@ import Foundation
 
 @MainActor
 final class HomeViewModel: ObservableObject {
-    // Functions
+    @Published var recommendations: [CreditCard] = []
+    
+    func fetchRecommendations() {
+        self.recommendations.removeAll()
+        for creditCard in CreditCard.dummyRecommendedCreditCards {
+            self.recommendations.append(creditCard)
+        }
+    }
 }

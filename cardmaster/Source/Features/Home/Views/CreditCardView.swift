@@ -10,30 +10,72 @@ import SwiftUI
 struct CreditCardView: View {
     var creditCard: CreditCard
     
+    @State private var showImmersiveSpace: Bool = false
+    @State private var immersiveSpaceIsShown: Bool = false
+    @Environment(\.openImmersiveSpace) var openImmersiveSpace
+    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    
     var body: some View {
         content
+            .onChange(of: showImmersiveSpace) { _, newValue in
+                Task {
+                    if newValue {
+                        switch await openImmersiveSpace(id: "ImmersiveSpace") {
+                        case .opened:
+                            immersiveSpaceIsShown = true
+                        case .error, .userCancelled:
+                            fallthrough
+                        @unknown default:
+                            immersiveSpaceIsShown = false
+                            showImmersiveSpace = false
+                        }
+                    } else if immersiveSpaceIsShown {
+                        await dismissImmersiveSpace()
+                        immersiveSpaceIsShown = false
+                    }
+                }
+            }
     }
     
     var content: some View {
         VStack(alignment: .leading) {
-            Image(creditCard.image)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 400)
-                .hoverEffect(.automatic)
+            Group {
+                if !showImmersiveSpace {
+                    Image(creditCard.image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 400)
+                        .hoverEffect(.automatic)
+                } else {
+                    Button {
+                        showImmersiveSpace = false
+                    } label: {
+                        Text("Back")
+                    }
+                }
+            }
             Text(creditCard.cardName)
                 .font(.largeTitle)
             Text("Recommended by \(creditCard.who)")
                 .foregroundStyle(Color.white)
                 .opacity(0.6)
             tags
+            Group {
+                if showImmersiveSpace {
+                    Text(creditCard.description)
+                        .padding(.top)
+                        .font(.caption2)
+                        .frame(maxWidth: 400)
+                }
+            }
             specialOffer
             HStack {
                 applyButton
                 addToWishlistButton
             }
         }
-        .padding()
+        .scaledToFit()
+        .frame(width: 500, height: 550)
         .background(
             .ultraThinMaterial,
             in: RoundedRectangle(cornerRadius: 20)
@@ -51,16 +93,16 @@ struct CreditCardView: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 20, height: 20)
-                                    .foregroundStyle(Color.black)
+                                    .foregroundStyle(Color.white)
                                 Text(tagStringConverter(tag: tag))
                                     .font(.caption2)
-                                    .foregroundStyle(Color.black)
+                                    .foregroundStyle(Color.white)
                                     .padding(.trailing, 5)
                             }
                         }
                         .padding(7)
                         .background(
-                            Color.white,
+                            .ultraThinMaterial,
                             in: RoundedRectangle(cornerRadius: 20)
                         )
                     }
@@ -84,27 +126,27 @@ struct CreditCardView: View {
     
     var applyButton: some View {
         HStack {
-            Text("Learn More")
-                .foregroundStyle(Color.white)
-            Image(systemName: "chevron.right")
-                .foregroundStyle(Color.white)
+            Text(showImmersiveSpace ? "Apply" : "Learn More")
+                .foregroundStyle(Color.black)
+            Image(systemName: showImmersiveSpace ? "link" : "chevron.right")
+                .foregroundStyle(Color.black)
         }
         .padding()
         .background(
-            LinearGradient(
-                gradient: Gradient(colors: [Color.orange, Color.red]),
-                startPoint: .leading,
-                endPoint: .trailing
-            )
+            Color.white
         )
         .onTapGesture {
-            
+            CreditCard.immersionState = creditCard.immersive
+            if showImmersiveSpace {
+                openURLInSafari(urlString: creditCard.signupLink)
+            }
+            showImmersiveSpace = true
         }
     }
     
     var addToWishlistButton: some View {
         HStack {
-            Text("Add to Wishlist")
+            Text(creditCard.wishlisted ? "Remove from Wishlist" : "Add to Wishlist")
                 .foregroundStyle(Color.white)
             Image(systemName: "heart")
                 .foregroundStyle(Color.white)
@@ -114,7 +156,7 @@ struct CreditCardView: View {
             .thinMaterial
         )
         .onTapGesture {
-            
+            CreditCard.toggleWishlist(for: creditCard.id)
         }
     }
 }
@@ -151,6 +193,12 @@ extension CreditCardView {
             return "Store"
         case .student(_):
             return "Student"
+        }
+    }
+    
+    func openURLInSafari(urlString: String) {
+        if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
 }
