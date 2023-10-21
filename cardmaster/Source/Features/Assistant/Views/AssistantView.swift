@@ -26,7 +26,9 @@ struct AssistantView: View {
     }
     
     var messages: some View {
-        Group {}
+        ForEach(vm.messages.indices, id: \.self) { index in
+            alternatingView(for: index)
+        }
     }
     
     var keyboard: some View {
@@ -55,9 +57,9 @@ struct AssistantView: View {
     func alternatingView(for index: Int) -> some View {
         Group {
             if index % 2 == 0 {
-                userMessage(query: chatbotViewModel.messages[index])
+                userMessage(query: vm.messages[index])
             } else {
-                botMessage(response: chatbotViewModel.messages[index])
+                botMessage(response: vm.messages[index])
             }
         }
     }
@@ -65,15 +67,7 @@ struct AssistantView: View {
     @ViewBuilder
     func botMessage(response: String) -> some View {
         HStack {
-            /*
-            MARK: Change to a new one
-            Image("Robot")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 100, height: 100)
-                .shadow(radius: 3)
-             */
-            Image(systemName: "person") // MARK: Remove
+            Image(systemName: "person") // MARK: Remove for new design
                 .resizable()
                 .scaledToFill()
                 .frame(width: 70, height: 70)

@@ -17,7 +17,7 @@ struct HomeView: View {
     }
     
     var content: some View {
-        Group {}
+        Text("HomeView")
     }
 }
 

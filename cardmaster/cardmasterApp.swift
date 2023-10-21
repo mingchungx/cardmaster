@@ -13,9 +13,10 @@ struct cardmasterApp: App {
         WindowGroup {
             ContentView()
         }
-
+        
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
-        }.immersionStyle(selection: .constant(.full), in: .full)
+        }
+        .immersionStyle(selection: .constant(.full), in: .full)
     }
 }

@@ -19,6 +19,7 @@
 		BDBF52142AE383360058F2E0 /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF52132AE383360058F2E0 /* AssistantView.swift */; };
 		BDBF52162AE389730058F2E0 /* AssistantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF52152AE389730058F2E0 /* AssistantViewModel.swift */; };
 		BDBF52182AE389EE0058F2E0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF52172AE389EE0058F2E0 /* HomeViewModel.swift */; };
+		BDBF521B2AE38D920058F2E0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BDBF521A2AE38D920058F2E0 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDBF51E02AE3695F0058F2E0 /* RealityKitContent in Frameworks */,
+				BDBF521B2AE38D920058F2E0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +280,7 @@
 			name = cardmaster;
 			packageProductDependencies = (
 				BDBF51DF2AE3695F0058F2E0 /* RealityKitContent */,
+				BDBF521A2AE38D920058F2E0 /* Alamofire */,
 			);
 			productName = cardmaster;
 			productReference = BDBF51DA2AE3695F0058F2E0 /* cardmaster.app */;
@@ -307,6 +310,9 @@
 				Base,
 			);
 			mainGroup = BDBF51D12AE3695F0058F2E0;
+			packageReferences = (
+				BDBF52192AE38D920058F2E0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = BDBF51DB2AE3695F0058F2E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -542,10 +548,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		BDBF52192AE38D920058F2E0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		BDBF51DF2AE3695F0058F2E0 /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
+		};
+		BDBF521A2AE38D920058F2E0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDBF52192AE38D920058F2E0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
