@@ -10,42 +10,46 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-
-    @State private var showImmersiveSpace = false
-    @State private var immersiveSpaceIsShown = false
-
-    @Environment(\.openImmersiveSpace) var openImmersiveSpace
-    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-
     var body: some View {
+        content
+            .glassBackgroundEffect()
+    }
+    
+    var content: some View {
         VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
-
-            Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
-                .toggleStyle(.button)
-                .padding(.top, 50)
+            header
+            Divider()
+                .padding()
+            navigator
+        } // Overlay the profile editor
+    }
+    
+    var header: some View {
+        HStack {
+            // Replace with logo or design
+            Text("cardmaster")
+            Spacer()
+            Image(systemName: "person.fill")
+                .padding(10)
+                .background(
+                    .ultraThinMaterial, 
+                    in: Circle()
+                )
         }
         .padding()
-        .onChange(of: showImmersiveSpace) { _, newValue in
-            Task {
-                if newValue {
-                    switch await openImmersiveSpace(id: "ImmersiveSpace") {
-                    case .opened:
-                        immersiveSpaceIsShown = true
-                    case .error, .userCancelled:
-                        fallthrough
-                    @unknown default:
-                        immersiveSpaceIsShown = false
-                        showImmersiveSpace = false
-                    }
-                } else if immersiveSpaceIsShown {
-                    await dismissImmersiveSpace()
-                    immersiveSpaceIsShown = false
+    }
+    
+    var navigator: some View {
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house")
                 }
-            }
+            
+            AssistantView()
+                .tabItem {
+                    Label("Assistant", systemImage: "questionmark.circle")
+                }
         }
     }
 }
