@@ -61,7 +61,6 @@ enum CreditScore {
 
 struct User {
     var username: String
-    var age: Int
     var occupation: Occupation
     var income: Int
     var creditScore: CreditScore
@@ -73,9 +72,8 @@ struct User {
 extension User {
     // MARK: User.user only exists in one lifetype of the program
     
-    static let user: User = User(
-        username: "waterwaterwater.loolooloo",
-        age: 18,
+    static var user: User = User(
+        username: "im_a_rich_tabby_42",
         occupation: .student,
         income: 10000,
         creditScore: .fair,

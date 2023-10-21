@@ -13,15 +13,15 @@ struct AssistantView: View {
     @ObservedObject private var vm: AssistantViewModel = AssistantViewModel()
     
     var body: some View {
-        content
+        ScrollView {
+            content
+        }
     }
     
     var content: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                messages
-                keyboard
-            }
+        VStack(alignment: .leading) {
+            messages
+            keyboard
         }
     }
     
@@ -103,4 +103,5 @@ struct AssistantView: View {
 
 #Preview {
     AssistantView()
+        .glassBackgroundEffect()
 }

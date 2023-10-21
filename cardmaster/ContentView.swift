@@ -19,7 +19,6 @@ struct ContentView: View {
         VStack {
             header
             Divider()
-                .padding()
             navigator
         } // Overlay the profile editor
     }
@@ -27,28 +26,35 @@ struct ContentView: View {
     var header: some View {
         HStack {
             // Replace with logo or design
-            Text("cardmaster")
+            Image("cardmasterLogoSmall")
+                .padding(.vertical)
+            Image("cardmasterLogoTextSmall")
+                .padding(.vertical)
             Spacer()
-            Image(systemName: "person.fill")
-                .padding(10)
-                .background(
-                    .ultraThinMaterial, 
-                    in: Circle()
-                )
         }
-        .padding()
+        .padding(.leading, 30)
     }
     
     var navigator: some View {
         TabView {
             HomeView()
                 .tabItem {
-                    Label("Home", systemImage: "house")
+                    Label("Home", systemImage: "sparkle")
+                }
+            
+            WishlistView()
+                .tabItem {
+                    Label("Wishlist", systemImage: "heart")
                 }
             
             AssistantView()
                 .tabItem {
-                    Label("Assistant", systemImage: "questionmark.circle")
+                    Label("Assistant", systemImage: "questionmark.bubble")
+                }
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
                 }
         }
     }

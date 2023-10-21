@@ -23,4 +23,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .glassBackgroundEffect()
 }
