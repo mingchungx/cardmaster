@@ -1,5 +1,14 @@
 # cardmaster
 
+See also:
+[https://github.com/LukeWang2/cardmaster-backend.git](https://github.com/LukeWang2/cardmaster-backend.git)
+
+[https://github.com/shencynthia/cardmaster-database.git](https://github.com/shencynthia/cardmaster-database.git)
+
+[https://github.com/shencynthia/cardmaster-website.git](https://github.com/shencynthia/cardmaster-website.git)
+
+[https://github.com/mingchungx/cardmaster-inputgenerator.git](https://github.com/mingchungx/cardmaster-inputgenerator.git)
+
 ## Description
 
 cardmaster is a credit card churning visionOS application, built for the upcoming Apple Vision Pro at HackHarvard 2023 at Harvard University. On our flight to Boston, we noticed the prevalence of credit card advertisements at every corner of the airport. As the credit card market grows, more and more businesses are spending increasingly more on customer acquisition costs, yet most of the time, users are not engaged to the vast sea of options, and end up not making a decision. Taking advantage of credit cards, and churning them according to your wallet, is at the core of maximizing the potential of your wallet - which cardmaster takes care of for you.
@@ -12,7 +21,6 @@ Frontend (this repository): Swift, SwiftUI, VisionOS, RealityKit, Alamofire, MVV
 Backend (nested submodules): Python, NumPy, Bitarray, Flask, Scikit Learn, Pandas, Cohere, Docker
 
 Database: Google Cloud Platform (GCP)
-
 
 Our frontend uses immersive visionOS computing for a mixed-reality environment. The user can enter demographic information which is displayed in a recommendation feed. The various features of a card - from offers to purpose - are curated for you, and immerse you in a virtual environment. These personally churned credit cards can be saved in a wishlist. For financial advice, the user can also refer to a large-language-model prompt-engineered to provide financial assistance regarding your credit decisions.
 
