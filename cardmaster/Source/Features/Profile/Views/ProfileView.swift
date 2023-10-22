@@ -40,12 +40,28 @@ struct ProfileView: View {
     
     var content: some View {
         VStack(alignment: .leading) {
+            cat
             header
             description
             fields
-            saveButton
+            buttons
             Spacer()
         }
+    }
+    
+    var cat: some View {
+        Image("Cat")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 100, height: 100)
+            .clipShape(Circle())
+            .padding(3)
+            .background(
+                .ultraThinMaterial,
+                in: Circle()
+            )
+            .padding(.leading)
+            .padding(.bottom)
     }
     
     var header: some View {
@@ -53,6 +69,7 @@ struct ProfileView: View {
             .font(.largeTitle)
             .fontWeight(.bold)
             .padding(.horizontal)
+            .padding(.bottom)
     }
     
     var description: some View {
@@ -75,24 +92,49 @@ struct ProfileView: View {
         }
     }
     
-    var saveButton: some View {
-        Button {
-            User.user.username = username
-            User.user.occupation = occupation
-            User.user.income = income
-            User.user.creditScore = creditScore
-            User.user.budget = budget
-            User.user.income = income
-            User.user.travelFrequency = travelFrequency
-            User.user.travelInterest = travelInterest
-        } label: {
-            Text("Save")
+    var buttons: some View {
+        HStack {
+            saveButton
+            sendFeedback
         }
         .padding()
     }
     
+    var saveButton: some View {
+        HStack {
+            Text("Save")
+                .foregroundStyle(Color.black)
+            Image(systemName: "arrow.down.app")
+                .foregroundStyle(Color.black)
+        }
+        .padding()
+        .background(
+            Color.white
+        )
+        .onTapGesture {
+            saveUser()
+        }
+    }
+    
+    var sendFeedback: some View {
+        HStack {
+            Text("Send Feedback")
+                .foregroundStyle(Color.white)
+            Image(systemName: "paperplane")
+                .foregroundStyle(Color.white)
+        }
+        .padding()
+        .background(
+            .thinMaterial
+        )
+        .onTapGesture {
+            
+        }
+    }
+    
     var leftFields: some View {
         VStack(alignment: .leading) {
+            /*
             Text("Username")
                 .fontWeight(.bold)
             TextField("im_a_rich_tabby", text: $username)
@@ -103,8 +145,8 @@ struct ProfileView: View {
                 )
             
             Spacer()
-            
-            Text("Occupation")
+            */
+            Text("What is your current occupation?")
                 .fontWeight(.bold)
             Picker("Occupation", selection: $selectedOccupationIndex) {
                 ForEach(0..<7) { index in
@@ -121,7 +163,7 @@ struct ProfileView: View {
             
             Spacer()
             
-            Text("Annual Income ($)")
+            Text("What is your annual income? ($)")
                 .fontWeight(.bold)
             Picker("Annual Income ($)", selection: $selectedIncomeIndex) {
                 ForEach(0..<15) { index in
@@ -143,7 +185,7 @@ struct ProfileView: View {
     
     var midFields: some View {
         VStack(alignment: .leading) {
-            Text("Credit Score")
+            Text("What is your current credit score range?")
                 .fontWeight(.bold)
             Picker("Credit Score", selection: $selectedCreditScoreIndex) {
                 ForEach(0..<5) { index in
@@ -159,7 +201,7 @@ struct ProfileView: View {
             )
             
             Spacer()
-            Text("Annual Fee Budget ($)")
+            Text("What is your budget for credit card annual fees? ($)")
                 .fontWeight(.bold)
             TextField("200", text: $budgetInput)
                 .onReceive(Just(budgetInput)) { newValue in
@@ -261,6 +303,17 @@ extension ProfileView {
         case .excellent:
             return "Excellent (\(creditScoreToRange(creditScore)))"
         }
+    }
+    
+    func saveUser() {
+        User.user.username = username
+        User.user.occupation = occupation
+        User.user.income = income
+        User.user.creditScore = creditScore
+        User.user.budget = budget
+        User.user.income = income
+        User.user.travelFrequency = travelFrequency
+        User.user.travelInterest = travelInterest
     }
 }
 

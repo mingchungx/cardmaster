@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BD0A22FB2AE4BD7000EA1FC2 /* Beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0A22FA2AE4BD7000EA1FC2 /* Beach.jpg */; };
-		BD0A22FD2AE4BE5D00EA1FC2 /* Mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0A22FC2AE4BE5D00EA1FC2 /* Mountain.jpg */; };
-		BD0A22FF2AE4BF1600EA1FC2 /* Student.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0A22FE2AE4BF1600EA1FC2 /* Student.jpg */; };
-		BD0A23032AE4C63300EA1FC2 /* Travel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0A23022AE4C63300EA1FC2 /* Travel.jpg */; };
+		BD0A23072AE4C92800EA1FC2 /* Store.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0A23062AE4C92800EA1FC2 /* Store.jpg */; };
+		BD0A23092AE4C96300EA1FC2 /* Student.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0A23082AE4C96300EA1FC2 /* Student.jpg */; };
+		BD0A230D2AE4D58D00EA1FC2 /* Travel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0A230C2AE4D58D00EA1FC2 /* Travel.jpg */; };
+		BD0A230F2AE4D8ED00EA1FC2 /* Mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0A230E2AE4D8ED00EA1FC2 /* Mountain.jpg */; };
 		BDBF51E02AE3695F0058F2E0 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = BDBF51DF2AE3695F0058F2E0 /* RealityKitContent */; };
 		BDBF51E22AE3695F0058F2E0 /* cardmasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF51E12AE3695F0058F2E0 /* cardmasterApp.swift */; };
 		BDBF51E42AE3695F0058F2E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF51E32AE3695F0058F2E0 /* ContentView.swift */; };
@@ -32,15 +33,15 @@
 		BDBF52392AE49A950058F2E0 /* Office.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDBF52302AE49A940058F2E0 /* Office.jpg */; };
 		BDBF523A2AE49A950058F2E0 /* Airport.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDBF52312AE49A940058F2E0 /* Airport.jpg */; };
 		BDBF523B2AE49A950058F2E0 /* Personal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDBF52322AE49A940058F2E0 /* Personal.jpg */; };
-		BDBF523C2AE49A950058F2E0 /* Store.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDBF52332AE49A940058F2E0 /* Store.jpg */; };
 		BDBF523D2AE49A950058F2E0 /* Hotel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDBF52342AE49A940058F2E0 /* Hotel.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BD0A22FA2AE4BD7000EA1FC2 /* Beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Beach.jpg; sourceTree = "<group>"; };
-		BD0A22FC2AE4BE5D00EA1FC2 /* Mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mountain.jpg; sourceTree = "<group>"; };
-		BD0A22FE2AE4BF1600EA1FC2 /* Student.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Student.jpg; sourceTree = "<group>"; };
-		BD0A23022AE4C63300EA1FC2 /* Travel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Travel.jpg; sourceTree = "<group>"; };
+		BD0A23062AE4C92800EA1FC2 /* Store.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Store.jpg; sourceTree = "<group>"; };
+		BD0A23082AE4C96300EA1FC2 /* Student.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Student.jpg; sourceTree = "<group>"; };
+		BD0A230C2AE4D58D00EA1FC2 /* Travel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Travel.jpg; sourceTree = "<group>"; };
+		BD0A230E2AE4D8ED00EA1FC2 /* Mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mountain.jpg; sourceTree = "<group>"; };
 		BDBF51DA2AE3695F0058F2E0 /* cardmaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardmaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBF51DE2AE3695F0058F2E0 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		BDBF51E12AE3695F0058F2E0 /* cardmasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardmasterApp.swift; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		BDBF52302AE49A940058F2E0 /* Office.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Office.jpg; sourceTree = "<group>"; };
 		BDBF52312AE49A940058F2E0 /* Airport.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Airport.jpg; sourceTree = "<group>"; };
 		BDBF52322AE49A940058F2E0 /* Personal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Personal.jpg; sourceTree = "<group>"; };
-		BDBF52332AE49A940058F2E0 /* Store.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Store.jpg; sourceTree = "<group>"; };
 		BDBF52342AE49A940058F2E0 /* Hotel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hotel.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -335,12 +335,12 @@
 				BDBF52312AE49A940058F2E0 /* Airport.jpg */,
 				BD0A22FA2AE4BD7000EA1FC2 /* Beach.jpg */,
 				BDBF52342AE49A940058F2E0 /* Hotel.jpg */,
-				BD0A22FC2AE4BE5D00EA1FC2 /* Mountain.jpg */,
+				BD0A230E2AE4D8ED00EA1FC2 /* Mountain.jpg */,
 				BDBF52302AE49A940058F2E0 /* Office.jpg */,
+				BD0A23062AE4C92800EA1FC2 /* Store.jpg */,
+				BD0A230C2AE4D58D00EA1FC2 /* Travel.jpg */,
 				BDBF52322AE49A940058F2E0 /* Personal.jpg */,
-				BDBF52332AE49A940058F2E0 /* Store.jpg */,
-				BD0A22FE2AE4BF1600EA1FC2 /* Student.jpg */,
-				BD0A23022AE4C63300EA1FC2 /* Travel.jpg */,
+				BD0A23082AE4C96300EA1FC2 /* Student.jpg */,
 				BDBF51E92AE369610058F2E0 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -416,13 +416,13 @@
 				BDBF523B2AE49A950058F2E0 /* Personal.jpg in Resources */,
 				BDBF523A2AE49A950058F2E0 /* Airport.jpg in Resources */,
 				BD0A22FB2AE4BD7000EA1FC2 /* Beach.jpg in Resources */,
-				BDBF523C2AE49A950058F2E0 /* Store.jpg in Resources */,
+				BD0A23072AE4C92800EA1FC2 /* Store.jpg in Resources */,
 				BDBF51ED2AE369610058F2E0 /* Preview Assets.xcassets in Resources */,
 				BDBF51E82AE3695F0058F2E0 /* ImageBasedLighting.skybox in Resources */,
-				BD0A22FF2AE4BF1600EA1FC2 /* Student.jpg in Resources */,
-				BD0A22FD2AE4BE5D00EA1FC2 /* Mountain.jpg in Resources */,
 				BDBF523D2AE49A950058F2E0 /* Hotel.jpg in Resources */,
-				BD0A23032AE4C63300EA1FC2 /* Travel.jpg in Resources */,
+				BD0A23092AE4C96300EA1FC2 /* Student.jpg in Resources */,
+				BD0A230F2AE4D8ED00EA1FC2 /* Mountain.jpg in Resources */,
+				BD0A230D2AE4D58D00EA1FC2 /* Travel.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
