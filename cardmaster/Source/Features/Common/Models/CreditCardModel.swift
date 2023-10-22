@@ -55,7 +55,6 @@ extension CreditCard {
     
     static var recommendedCreditCards: [CreditCard] = {[]}()
     
-    #warning("images and immersive filenames must match")
     static var dummyRecommendedCreditCards: [CreditCard] = {
         [CreditCard(id: "3a513eca-1b9d-4377-afc5-7efca9986879", apr: "21.74% - 28.74%", who: "cardmaster", annualFee: "$0 intro annual fee for the first year, then $99", cardName: "United Business Card", creditRange: "670-850", description: "The United℠ Business Card is an airline cobranded business travel card. It’s designed for businesses that frequently fly with United Airlines. With this card, you will earn 2 miles per dollar with United and at restaurants, gas stations, office supply stores, and on local transit and commuting. All other purchases earn 1 mile per dollar. With the United℠ Business Card, you'll earn 75,000 bonus points after you spend $5,000 on purchases in the first 3 months your account is open. Plus, $0 introductory annual fee for the first year, then $99.", image: "Cart Gradient 2", immersive: "Office", offeringInstitution: "Chase Bank", signupLink: "https://www.theexplorercard.com/business-rewards-cards?CELL=H8X&AFFID=fHUfpvpiSTw-Cfgog9xYl_NBs5SJjKh31w", specialOffers: "With the United℠ Business Card, you'll earn 75,000 bonus points after you spend $5,000 on purchases in the first 3 months your account is open. Plus, $0 introductory annual fee for the first year, then $99.", tags: [.business(true), .cashback(true), .elite(false), .store(false), .student(false), .travel(true)], wishlisted: false),
          CreditCard(id: "a882aa0e-730b-4fcb-abf7-36a82a91008b", apr: "18.24% - 27.24%", who: "cardmaster", annualFee: "$0", cardName: "Discover it Student Chrome", creditRange: "580-740", description: "Discover it® Student Chrome is tailored for college students aiming to build credit while earning cash back. It provides 2% cash back on the first $1,000 spent in combined purchases at gas stations and restaurants each quarter. All other purchases earn 1% cash back. An unlimited cashback match is offered at the end of the first year, doubling the cash back earned.", image: "Cart Holograma 7", immersive: "Office", offeringInstitution: "Discover", signupLink: "https://www.discovercard.com/application/website/apply?srcCde=RJRM&ICMPGN=ALL_CC_STUDENT_CHROME_APPLY_NOW_BTN", specialOffers: "Unlimited Cashback Match at the end of the first year. No annual fee, 0% Intro APR for 6 months on purchases.", tags: [.business(false), .cashback(true), .elite(false), .store(false), .student(true), .travel(false)], wishlisted: false),
@@ -63,11 +62,10 @@ extension CreditCard {
         ]
     }()
     
-    #warning("Change to actual")
     static func toggleWishlist(for id: String) {
-        if let i = dummyRecommendedCreditCards.firstIndex(where: { $0.id == id }) {
-            dummyRecommendedCreditCards[i].wishlisted = !dummyRecommendedCreditCards[i].wishlisted
-            debugPrint("Successfully changed card \(i) to have \(dummyRecommendedCreditCards[i].wishlisted)")
+        if let i = recommendedCreditCards.firstIndex(where: { $0.id == id }) {
+            recommendedCreditCards[i].wishlisted = !recommendedCreditCards[i].wishlisted
+            debugPrint("Successfully changed card \(i) to have \(recommendedCreditCards[i].wishlisted)")
         }
     }
 }

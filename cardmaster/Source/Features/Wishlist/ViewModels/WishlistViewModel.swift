@@ -13,7 +13,14 @@ final class WishlistViewModel: ObservableObject {
     
     func fetchWishlist() {
         self.wishlist.removeAll()
+        /*
         for creditCard in CreditCard.dummyRecommendedCreditCards {
+            if creditCard.wishlisted {
+                self.wishlist.append(creditCard)
+            }
+        }
+         */
+        for creditCard in CreditCard.recommendedCreditCards {
             if creditCard.wishlisted {
                 self.wishlist.append(creditCard)
             }

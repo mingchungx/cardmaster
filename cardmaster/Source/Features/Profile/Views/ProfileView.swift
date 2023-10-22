@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ProfileView: View {
     @State private var username: String = "im_a_rich_tabby_42"
@@ -161,8 +162,13 @@ struct ProfileView: View {
             Text("Annual Fee Budget ($)")
                 .fontWeight(.bold)
             TextField("200", text: $budgetInput)
+                .onReceive(Just(budgetInput)) { newValue in
+                    let filtered = newValue.filter { "0123456789".contains($0) }
+                    if filtered != newValue {
+                        budgetInput = filtered
+                    }
+                }
                 .onChange(of: budgetInput) {
-                    #warning("Write an input checker for the budget field")
                     budget = Int(budgetInput) ?? 200
                 }
                 .padding()

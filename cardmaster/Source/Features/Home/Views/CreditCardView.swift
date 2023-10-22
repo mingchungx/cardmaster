@@ -55,6 +55,7 @@ struct CreditCardView: View {
                 }
             }
             Text(creditCard.cardName)
+                .lineLimit(1)
                 .font(.largeTitle)
             Text("Recommended by \(creditCard.who)")
                 .foregroundStyle(Color.white)

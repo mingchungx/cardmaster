@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var loading: Bool = false
     @State private var selectedCreditCardId: String = UUID().uuidString
     
     @ObservedObject private var vm: HomeViewModel = HomeViewModel()
@@ -15,8 +16,19 @@ struct HomeView: View {
     var body: some View {
         content
             .onAppear {
-                vm.fetchRecommendations()
+                Task {
+                    loading.toggle()
+                    await updateView()
+                    loading.toggle()
+                }
             }
+            .overlay(
+                Group {
+                    if loading {
+                        ProgressView()
+                    }
+                }
+            )
     }
     
     var content: some View {
@@ -42,6 +54,10 @@ struct HomeView: View {
             }
         }
         .padding(.leading)
+    }
+    
+    func updateView() async {
+        await vm.fetchRecommendations()
     }
 }
 
