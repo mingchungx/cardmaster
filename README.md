@@ -12,12 +12,12 @@ Database: Google Cloud Platform (GCP)
 
 ## Installation and Usage
 
-cardmaster is free to clone and use, with the following command, along with all nested submodules found in the "Backend" directory.
+cardmaster is free to clone and use, with the following command.
 ```
 git clone https://github.com/mingchungx/cardmaster.git
 ```
 
-We have a total of 4 submodules that contain the backend code and website for cardmaster. See here:
+We have a total of 4 submodules that contain the backend code and website for cardmaster. Please see also here:
 
 [https://github.com/LukeWang2/cardmaster-backend.git](https://github.com/LukeWang2/cardmaster-backend.git)
 
