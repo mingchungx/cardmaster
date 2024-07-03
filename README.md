@@ -19,15 +19,15 @@ git clone https://github.com/mingchungx/cardmaster.git
 
 We have a total of 5 other repositories that contain the backend code and website for cardmaster. Please see also here:
 
-[https://github.com/LukeWang2/cardmaster-backend.git](https://github.com/LukeWang2/cardmaster-backend.git)
+[https://github.com/LukeWang2/cardmaster-backend.git](https://github.com/LukeWang2/cardmaster-backend.git) - this is the REST API and implements Jaccard Index regression to recommend credit cards.
 
-[https://github.com/shencynthia/cardmaster-database.git](https://github.com/shencynthia/cardmaster-database.git)
+[https://github.com/shencynthia/cardmaster-database.git](https://github.com/shencynthia/cardmaster-database.git) - this is the pipeline for transferring credit card JSON data.
 
-[https://github.com/shencynthia/cardmaster-website.git](https://github.com/shencynthia/cardmaster-website.git)
+[https://github.com/shencynthia/cardmaster-website.git](https://github.com/shencynthia/cardmaster-website.git) - this is the website for cardmaster that we made last minute...
 
-[https://github.com/mingchungx/cardmaster-inputgenerator.git](https://github.com/mingchungx/cardmaster-inputgenerator.git)
+[https://github.com/mingchungx/cardmaster-inputgenerator.git](https://github.com/mingchungx/cardmaster-inputgenerator.git) - this generates data to train the regressor.
 
-[https://github.com/mingchungx/cardmaster-assistant.git](https://github.com/mingchungx/cardmaster-assistant.git)
+[https://github.com/mingchungx/cardmaster-assistant.git](https://github.com/mingchungx/cardmaster-assistant.git) - this is another microservice that is used for the NLP chatbot for finance.
 
 ## Images
 
